@@ -12,7 +12,7 @@ import Card from "../components/Card.astro";
 			<a href="/#">contact</a>
 		</nav> -->
 		<div class="glen">
-			<h2>Hey there, I'm <span id="click-name">Glen</span>.</h2>
+			<h2>Hey, I'm <span id="click-name">Glen</span>.</h2>
 		</div>
 		<div class="intro">
 			<p>I'm a</p>
@@ -22,7 +22,7 @@ import Card from "../components/Card.astro";
 				<option>musician</option>
 				<option>creative</option>
 			</select>
-			<p>living in St. John's, Newfoundland.</p>
+			<p class="right-align">living in St. John's, Newfoundland.</p>
 		</div>
 		<p></p>
 	</main>
@@ -80,7 +80,6 @@ import Card from "../components/Card.astro";
 		font-family: "Inter Tight";
 		font-weight: 800;
 		font-size: 1.5rem;
-		border-bottom: 2px solid #f8f9fa4f;
 		appearance: none;
 		width: 100%;
 	}
@@ -104,6 +103,10 @@ import Card from "../components/Card.astro";
 		justify-content: left;
 	}
 
+	.intro {
+		border: 2px solid #f8f9fa4f;
+	}
+
 	.intro p {
 		color: #f8f9fa;
 	}
@@ -111,5 +114,9 @@ import Card from "../components/Card.astro";
 	#click-name:hover {
 		color: red;
 		cursor: pointer;
+	}
+
+	.right-align {
+		text-align: right;
 	}
 </style>
