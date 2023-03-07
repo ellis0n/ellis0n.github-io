@@ -12,111 +12,178 @@ import Card from "../components/Card.astro";
 			<a href="/#">contact</a>
 		</nav> -->
 		<div class="glen">
-			<h2>Hey, I'm <span id="click-name">Glen</span>.</h2>
+			<nav>
+				<a href="/me">about</a>
+				<a href="/#">work</a>
+				<a href="/#">creative</a>
+				<a href="/#">contact</a>
+			</nav>
 		</div>
 		<div class="intro">
-			<p>I'm a</p>
-			<select>
-				<option>software developer</option>
-				<option>father</option>
-				<option>musician</option>
-				<option>creative</option>
-			</select>
-			<p class="right-align">living in St. John's, Newfoundland.</p>
+			<h1>about</h1>
+			<p>
+				i'm a software developer living in st john's, newfoundland with my
+				family of six (three people, three cats)
+			</p>
+			<p>
+				i spend my free time <a href="https://ccconditionerrr.bandcamp.com">
+					playing music,
+				</a> volunteering with <a href="https://lawnyavawnya.com"
+					>lawnya vawnya,
+				</a> making videos and learning new things.
+			</p>
+			<p>
+				i'm currently looking for opportunities to learn and grow as a junior
+				developer. you can check out my resume <a href="/resume">here</a>.
+			</p>
+			<h1>contact:</h1>
+			<ul>
+				<li>
+					<a href="mailto:ellisonglenmay.dev@gmail.com">email</a>
+				</li>
+				<li><a href="https://www.github.com/ellis0n">github</a></li>
+				<li>
+					<a href="https://www.linkedin.com/in/ellison-glen-may">linkedin</a>
+				</li>
+				<li><a href="https://www.twitter.com/ellis0n">twitter</a></li>
+				<li>
+					<a href="https://www.instagram.com/ellis0n">instagram</a>
+				</li>
+				<!-- <Card href="/#" title="Glen" body="May" /> -->
+			</ul>
+
+			<style>
+				main {
+					margin: auto;
+					padding: 1.5rem;
+					max-width: 60ch;
+				}
+
+				ul,
+				li {
+					display: flex;
+					flex-direction: column;
+					text-align: center;
+					justify-content: space-between;
+					list-style: none;
+					padding: 0.2em;
+				}
+
+				header {
+					margin-bottom: 1rem;
+				}
+
+				nav {
+					display: flex;
+					justify-content: space-evenly;
+					margin-bottom: 1rem;
+					color: #f8f9fa;
+					text-decoration: none;
+				}
+				a {
+					text-decoration: none;
+					color: #fff;
+				}
+
+				a:hover {
+					color: red;
+				}
+
+				h1 {
+					text-align: center;
+					font-family: "Beth Ellen";
+					font-size: 3rem;
+					margin: 0;
+					/* border-bottom: 2px solid #000; */
+					margin-bottom: 1rem;
+					color: #f8f9fa;
+				}
+				@media (max-width: 600px) {
+					h1 {
+						font-size: 2rem;
+					}
+				}
+
+				h2 {
+					font-family: "Inter Tight";
+					font-weight: 200;
+					font-weight: 800;
+					color: #f8f9fa;
+				}
+
+				select {
+					background-color: #000009;
+					color: #f8f9fa;
+					/* border: none; */
+					font-family: "Inter Tight";
+					font-weight: 200;
+					font-size: 1rem;
+					appearance: none;
+					width: 100%;
+					text-align: right;
+				}
+
+				select:hover {
+					background-color: #f8f9fa38;
+				}
+
+				option {
+					color: black;
+					background-color: #f8f9fa;
+				}
+
+				option:hover {
+					color: red;
+				}
+
+				.glen {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					height: 300px;
+					width: 300px;
+					margin: auto;
+					margin-bottom: 1rem;
+					background-image: url("../../img/silhouette.gif");
+					background-size: cover;
+					background-position: center;
+					background-color: #f8f9fa38;
+					border-radius: 0.3rem;
+				}
+
+				.glen h2 {
+					background-color: #f8f9fa12;
+					padding: 0.5rem;
+					margin: 0;
+					width: auto;
+				}
+
+				.intro {
+					margin: auto;
+					width: 300px;
+					margin-bottom: 1rem;
+					background-color: #f8f9fa38;
+					border-radius: 0.3rem;
+					opacity: 0.9;
+				}
+
+				.intro p {
+					background-color: #f8f9fa46;
+					display: inline-block;
+					text-align: left;
+					padding: 1rem;
+					margin: auto auto;
+				}
+
+				#click-name:hover {
+					color: red;
+					cursor: pointer;
+				}
+
+				.right-align {
+					text-align: right;
+				}
+			</style>
 		</div>
-		<p></p>
 	</main>
-	<!-- <Card href="/#" title="Glen" body="May" /> -->
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-
-	header {
-		margin-bottom: 1rem;
-	}
-
-	nav {
-		display: flex;
-		justify-content: space-evenly;
-		margin-bottom: 1rem;
-		color: #f8f9fa;
-		text-decoration: none;
-	}
-	a {
-		text-decoration: none;
-		color: #fff;
-	}
-
-	a:hover {
-		color: red;
-	}
-
-	h1 {
-		text-align: center;
-		font-family: "Beth Ellen";
-		font-size: 3rem;
-		margin: 0;
-		/* border-bottom: 2px solid #000; */
-		margin-bottom: 1rem;
-		color: #f8f9fa;
-	}
-
-	h2 {
-		font-family: "Inter Tight";
-		font-weight: 200;
-		font-weight: 800;
-		color: #f8f9fa;
-	}
-
-	select {
-		background-color: inherit;
-		color: #f8f9fa;
-		border: none;
-		font-family: "Inter Tight";
-		font-weight: 800;
-		font-size: 1.5rem;
-		appearance: none;
-		width: 100%;
-	}
-
-	select:hover {
-		background-color: #f8f9fa38;
-	}
-
-	option {
-		color: black;
-		background-color: #f8f9fa;
-		text-align: center;
-	}
-
-	option:hover {
-		color: red;
-	}
-
-	.glen {
-		display: flex;
-		justify-content: left;
-	}
-
-	.intro {
-		border: 2px solid #f8f9fa4f;
-	}
-
-	.intro p {
-		color: #f8f9fa;
-	}
-
-	#click-name:hover {
-		color: red;
-		cursor: pointer;
-	}
-
-	.right-align {
-		text-align: right;
-	}
-</style>
