@@ -5,13 +5,13 @@ import Card from "../components/Card.astro";
 
 <Layout title="ellison glen may">
 	<main>
-		<header><h1>ellison glen may</h1></header>
 		<!-- <nav>
 			<a href="/me">about</a>
 			<a href="/#">work</a>
 			<a href="/#">contact</a>
 		</nav> -->
 		<div class="glen">
+			<header><h1>ellison glen may</h1></header>
 			<nav>
 				<a href="/me">about</a>
 				<a href="/#">work</a>
@@ -19,12 +19,20 @@ import Card from "../components/Card.astro";
 				<a href="/#">contact</a>
 			</nav>
 		</div>
+
+		<Card
+			href="/#"
+			title="about!"
+			body="hi, i'm glen, a software developer living in st john's, newfoundland."
+			body2="with my family of six (three people, three cats)"
+			body3="i spend my free time playing music, volunteering with lawnya vawnya, making videos and learning new things."
+			body4="i'm currently looking for opportunities to learn and grow as a junior developer. you can check out my resume here."
+		/>
 		<div class="intro">
-			<h1>about</h1>
-			<p>
-				i'm a software developer living in st john's, newfoundland with my
-				family of six (three people, three cats)
-			</p>
+			<h1>about!</h1>
+			<p>hello, i'm</p>
+			<p>a software developer living in st john's, newfoundland.</p>
+			<p>with my family of six (three people, three cats)</p>
 			<p>
 				i spend my free time <a href="https://ccconditionerrr.bandcamp.com">
 					playing music,
@@ -36,7 +44,7 @@ import Card from "../components/Card.astro";
 				i'm currently looking for opportunities to learn and grow as a junior
 				developer. you can check out my resume <a href="/resume">here</a>.
 			</p>
-			<h1>contact:</h1>
+			<!-- <h1>contact:</h1>
 			<ul>
 				<li>
 					<a href="mailto:ellisonglenmay.dev@gmail.com">email</a>
@@ -48,142 +56,137 @@ import Card from "../components/Card.astro";
 				<li><a href="https://www.twitter.com/ellis0n">twitter</a></li>
 				<li>
 					<a href="https://www.instagram.com/ellis0n">instagram</a>
-				</li>
-				<!-- <Card href="/#" title="Glen" body="May" /> -->
-			</ul>
-
-			<style>
-				main {
-					margin: auto;
-					padding: 1.5rem;
-					max-width: 60ch;
-				}
-
-				ul,
-				li {
-					display: flex;
-					flex-direction: column;
-					text-align: center;
-					justify-content: space-between;
-					list-style: none;
-					padding: 0.2em;
-				}
-
-				header {
-					margin-bottom: 1rem;
-				}
-
-				nav {
-					display: flex;
-					justify-content: space-evenly;
-					margin-bottom: 1rem;
-					color: #f8f9fa;
-					text-decoration: none;
-				}
-				a {
-					text-decoration: none;
-					color: #fff;
-				}
-
-				a:hover {
-					color: red;
-				}
-
-				h1 {
-					text-align: center;
-					font-family: "Beth Ellen";
-					font-size: 3rem;
-					margin: 0;
-					/* border-bottom: 2px solid #000; */
-					margin-bottom: 1rem;
-					color: #f8f9fa;
-				}
-				@media (max-width: 600px) {
-					h1 {
-						font-size: 2rem;
-					}
-				}
-
-				h2 {
-					font-family: "Inter Tight";
-					font-weight: 200;
-					font-weight: 800;
-					color: #f8f9fa;
-				}
-
-				select {
-					background-color: #000009;
-					color: #f8f9fa;
-					/* border: none; */
-					font-family: "Inter Tight";
-					font-weight: 200;
-					font-size: 1rem;
-					appearance: none;
-					width: 100%;
-					text-align: right;
-				}
-
-				select:hover {
-					background-color: #f8f9fa38;
-				}
-
-				option {
-					color: black;
-					background-color: #f8f9fa;
-				}
-
-				option:hover {
-					color: red;
-				}
-
-				.glen {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-					height: 300px;
-					width: 300px;
-					margin: auto;
-					margin-bottom: 1rem;
-					background-image: url("../../img/silhouette.gif");
-					background-size: cover;
-					background-position: center;
-					background-color: #f8f9fa38;
-					border-radius: 0.3rem;
-				}
-
-				.glen h2 {
-					background-color: #f8f9fa12;
-					padding: 0.5rem;
-					margin: 0;
-					width: auto;
-				}
-
-				.intro {
-					margin: auto;
-					width: 300px;
-					margin-bottom: 1rem;
-					background-color: #f8f9fa38;
-					border-radius: 0.3rem;
-					opacity: 0.9;
-				}
-
-				.intro p {
-					background-color: #f8f9fa46;
-					display: inline-block;
-					text-align: left;
-					padding: 1rem;
-					margin: auto auto;
-				}
-
-				#click-name:hover {
-					color: red;
-					cursor: pointer;
-				}
-
-				.right-align {
-					text-align: right;
-				}
-			</style>
+				</li> -->
+			<!-- <Card href="/#" title="Glen" body="May" /> -->
 		</div>
 	</main>
 </Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		height: 14vh;
+		/* width: 100%; */
+		max-width: 600px;
+		font-family: "Inter Tight";
+	}
+
+	ul,
+	li {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: space-between;
+		list-style: none;
+		padding: 0.2em;
+	}
+
+	header {
+		margin-bottom: 1rem;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-evenly;
+		margin-bottom: 0rem;
+		border-radius: 0rem 0rem 0.3rem 0.3rem;
+		color: #f8f9fa;
+		background-color: #f8f9fa38;
+		text-decoration: none;
+	}
+	nav :hover {
+		background-color: black;
+		color: white;
+	}
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	a:hover {
+		color: white;
+	}
+
+	h1 {
+		text-align: center;
+		font-family: "Beth Ellen";
+		font-size: 3rem;
+		margin: 0;
+		/* border-bottom: 2px solid #000; */
+		margin-bottom: 1rem;
+		color: #f8f9fa;
+	}
+
+	h2 {
+		font-family: "Inter Tight";
+		font-weight: 200;
+		font-weight: 800;
+		color: #f8f9fa;
+	}
+
+	select {
+		background-color: #000009;
+		color: #f8f9fa;
+		/* border: none; */
+		font-family: "Inter Tight";
+		font-weight: 200;
+		font-size: 1rem;
+		appearance: none;
+		width: 100%;
+		text-align: right;
+	}
+
+	select:hover {
+		background-color: #f8f9fa38;
+	}
+
+	option {
+		color: black;
+		background-color: #f8f9fa;
+	}
+
+	option:hover {
+		color: red;
+	}
+
+	.glen {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		/* height: 14vh;
+		width: 100%;
+		max-width: 600px; */
+		margin: auto;
+		margin-bottom: 1rem;
+		background-image: url("../../img/silhouette.gif");
+		background-size: cover;
+		background-position: center;
+		background-color: #f8f9fa38;
+		border-radius: 0.3rem;
+	}
+
+	.intro {
+		margin: auto;
+		/* width: 300px; */
+		margin-bottom: 1rem;
+		background-color: #f8f9fa38;
+		border-radius: 0.3rem;
+		opacity: 0.9;
+	}
+
+	#click-name:hover {
+		color: red;
+		cursor: pointer;
+	}
+
+	.right-align {
+		text-align: right;
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 2rem;
+		}
+	}
+</style>
