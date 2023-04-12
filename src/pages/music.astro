@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VideoCard from "../components/VideoCard.astro";
+import AudioCard from "../components/AudioCard.astro";
+import Header from "../components/Header.astro";
+
+const videos = [
+	"https://www.youtube.com/embed/vZIKpMCJa0o",
+	"https://www.youtube.com/embed/VnnpCLulc3I",
+	"https://www.youtube.com/embed/ACV6VklgAAA",
+	"https://www.youtube.com/embed/MWg0G0Laj9E",
+	"https://www.youtube.com/embed/vIgo35HxlY0",
+	"https://www.youtube.com/embed/rXe4cdkzze4",
+];
+
+const bandcamps = [
+	"https://bandcamp.com/EmbeddedPlayer/album=1028667214/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=2608923616/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=1726658832/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=4013567325/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=1798240872/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=1716912818/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=4159923482/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=1383406386/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/track=135467540/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=2993353831/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=2397740404/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=787610466/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+	"https://bandcamp.com/EmbeddedPlayer/album=3292800908/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/",
+];
+---
+
+<Layout title="ellison glen may">
+	<main>
+		<Header />
+		<AudioCard href="/#" title="audio" embeds={bandcamps} />
+		<VideoCard href="/#" title="videos" embeds={videos} />
+	</main>
+
+	<style>
+		main {
+			margin: auto;
+			padding: 1.5rem;
+			height: 14vh;
+			/* width: 100%; */
+			max-width: 600px;
+			font-family: "Inter Tight";
+		}
+
+		ul,
+		li {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			justify-content: space-between;
+			list-style: none;
+			padding: 0.2em;
+		}
+
+		header {
+			margin-bottom: 1rem;
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-evenly;
+			margin-bottom: 0rem;
+			border-radius: 0rem 0rem 0.3rem 0.3rem;
+			color: #f8f9fa;
+			background-color: #f8f9fa38;
+			text-decoration: none;
+		}
+		nav :hover {
+			background-color: black;
+			color: white;
+		}
+		a {
+			text-decoration: none;
+			color: #fff;
+			padding: 0.5rem;
+		}
+
+		a:hover {
+			color: white;
+			/* background-color: black; */
+		}
+
+		h1 {
+			text-align: center;
+			font-family: "Beth Ellen";
+			font-size: 3rem;
+			margin: 0;
+			/* border-bottom: 2px solid #000; */
+			margin-bottom: 1rem;
+			color: #f8f9fa;
+		}
+
+		h2 {
+			font-family: "Inter Tight";
+			font-weight: 200;
+			font-weight: 800;
+			color: #f8f9fa;
+		}
+
+		select {
+			/* background-color: #000009; */
+			color: #f8f9fa;
+			/* border: none; */
+			font-family: "Inter Tight";
+			font-weight: 200;
+			font-size: 1rem;
+			appearance: none;
+			width: 100%;
+			text-align: right;
+		}
+
+		.glen {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			/* height: 14vh;
+		width: 100%;
+		max-width: 600px; */
+			margin: auto;
+			margin-bottom: 1rem;
+			background-image: url("../../img/silhouette.gif");
+			background-size: cover;
+			background-position: center;
+			background-color: #f8f9fa38;
+			border-radius: 0.3rem;
+		}
+
+		.intro {
+			margin: auto;
+			/* width: 300px; */
+			margin-bottom: 1rem;
+			background-color: #f8f9fa38;
+			border-radius: 0.3rem;
+			opacity: 0.9;
+		}
+
+		.right-align {
+			text-align: right;
+		}
+
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+	</style>
+</Layout>

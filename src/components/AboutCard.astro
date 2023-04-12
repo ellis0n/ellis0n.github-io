@@ -1,0 +1,58 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body, body2, body3, body4 } = Astro.props;
+---
+
+<div class="card">
+	<div class="header">
+		<h1>
+			{title}
+		</h1>
+	</div>
+	<div class="text">
+		<p>
+			{body}
+		</p>
+	</div>
+</div>
+<style>
+	.card {
+		margin: auto;
+		/* width: 300px; */
+		margin-bottom: 1rem;
+		background-color: #f8f9fa38;
+		border-radius: 0.3rem;
+		opacity: 0.9;
+	}
+
+	.header {
+		height: auto;
+		text-align: center;
+		font-family: "Beth Ellen";
+		margin: 0;
+		/* border-bottom: 2px solid #000; */
+		margin-bottom: 1rem;
+		color: #f8f9fa;
+	}
+
+	.text {
+		padding: 0 1rem;
+		background-color: #f8f9fa46;
+	}
+
+	p {
+		text-align: center;
+		font-weight: 200;
+		font-size: 1.4rem;
+
+		display: inline-block;
+		text-align: left;
+		padding: 1rem;
+		margin: auto auto;
+	}
+</style>

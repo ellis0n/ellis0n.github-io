@@ -1,0 +1,75 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	list: { icon: string; url: string }[];
+}
+import { Icon } from "astro-icon";
+
+const { href, title, list } = Astro.props;
+---
+
+<div class="card">
+	<div class="header">
+		<h1>
+			{title}
+		</h1>
+	</div>
+	<div class="list">
+		{
+			list.map((item) => (
+				<a href={item.url}>
+					{console.log(typeof item.icon)}
+					<Icon pack="mdi" name={item.icon} />
+				</a>
+			))
+		}
+	</div>
+</div>
+
+<style>
+	.card {
+		margin: auto;
+		/* width: 300px; */
+		margin-bottom: 1rem;
+		background-color: #f8f9fa38;
+		border-radius: 0.3rem;
+		opacity: 0.9;
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+
+	.header {
+		height: auto;
+		text-align: center;
+		font-family: "Beth Ellen";
+		margin: 0;
+		/* border-bottom: 2px solid #000; */
+		margin-bottom: 1rem;
+		color: #f8f9fa;
+	}
+
+	.list {
+		padding: 0 1rem;
+		background-color: #f8f9fa46;
+		display: flex;
+		justify-content: space-evenly;
+		height: 100%;
+	}
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+
+	svg:hover {
+		background-color: #f8f9fa;
+		border-radius: 50%;
+	}
+</style>

@@ -1,192 +1,146 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import AboutCard from "../components/AboutCard.astro";
+import ContactCard from "../components/ContactCard.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="ellison glen may">
 	<main>
-		<!-- <nav>
-			<a href="/me">about</a>
-			<a href="/#">work</a>
-			<a href="/#">contact</a>
-		</nav> -->
-		<div class="glen">
-			<header><h1>ellison glen may</h1></header>
-			<nav>
-				<a href="/me">about</a>
-				<a href="/#">work</a>
-				<a href="/#">creative</a>
-				<a href="/#">contact</a>
-			</nav>
-		</div>
+		<Header />
 
-		<Card
+		<AboutCard
 			href="/#"
 			title="about!"
-			body="hi, i'm glen, a software developer living in st john's, newfoundland."
-			body2="with my family of six (three people, three cats)"
-			body3="i spend my free time playing music, volunteering with lawnya vawnya, making videos and learning new things."
-			body4="i'm currently looking for opportunities to learn and grow as a junior developer. you can check out my resume here."
+			body="hi, i'm glen! i'm a software developer in st. john's, newfoundland. "
 		/>
-		<div class="intro">
-			<h1>about!</h1>
-			<p>hello, i'm</p>
-			<p>a software developer living in st john's, newfoundland.</p>
-			<p>with my family of six (three people, three cats)</p>
-			<p>
-				i spend my free time <a href="https://ccconditionerrr.bandcamp.com">
-					playing music,
-				</a> volunteering with <a href="https://lawnyavawnya.com"
-					>lawnya vawnya,
-				</a> making videos and learning new things.
-			</p>
-			<p>
-				i'm currently looking for opportunities to learn and grow as a junior
-				developer. you can check out my resume <a href="/resume">here</a>.
-			</p>
-			<!-- <h1>contact:</h1>
-			<ul>
-				<li>
-					<a href="mailto:ellisonglenmay.dev@gmail.com">email</a>
-				</li>
-				<li><a href="https://www.github.com/ellis0n">github</a></li>
-				<li>
-					<a href="https://www.linkedin.com/in/ellison-glen-may">linkedin</a>
-				</li>
-				<li><a href="https://www.twitter.com/ellis0n">twitter</a></li>
-				<li>
-					<a href="https://www.instagram.com/ellis0n">instagram</a>
-				</li> -->
-			<!-- <Card href="/#" title="Glen" body="May" /> -->
-		</div>
+		<ContactCard
+			href="/contact"
+			title="contact!"
+			body="you can reach me at: "
+			list={[
+				{ url: "https://www.github.com/ellis0n", icon: "github" },
+				{
+					url: "https://www.linkedin.com/in/ellison-glen-may",
+					icon: "linkedin",
+				},
+				{ url: "https://www.instagram.com/internet_glen", icon: "instagram" },
+				{ url: "https://www.twitter.com/internet_glen", icon: "twitter" },
+				{ url: "mailto:ellisonglenmay.dev@gmail.com", icon: "email" },
+			]}
+		/>
 	</main>
-</Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		height: 14vh;
-		/* width: 100%; */
-		max-width: 600px;
-		font-family: "Inter Tight";
-	}
+	<style>
+		main {
+			margin: auto;
+			padding: 1.5rem;
+			height: 14vh;
+			/* width: 100%; */
+			max-width: 600px;
+			font-family: "Inter Tight";
+		}
 
-	ul,
-	li {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		justify-content: space-between;
-		list-style: none;
-		padding: 0.2em;
-	}
+		ul,
+		li {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			justify-content: space-between;
+			list-style: none;
+			padding: 0.2em;
+		}
 
-	header {
-		margin-bottom: 1rem;
-	}
+		header {
+			margin-bottom: 1rem;
+		}
 
-	nav {
-		display: flex;
-		justify-content: space-evenly;
-		margin-bottom: 0rem;
-		border-radius: 0rem 0rem 0.3rem 0.3rem;
-		color: #f8f9fa;
-		background-color: #f8f9fa38;
-		text-decoration: none;
-	}
-	nav :hover {
-		background-color: black;
-		color: white;
-	}
-	a {
-		text-decoration: none;
-		color: #fff;
-	}
+		nav {
+			display: flex;
+			justify-content: space-evenly;
+			margin-bottom: 0rem;
+			border-radius: 0rem 0rem 0.3rem 0.3rem;
+			color: #f8f9fa;
+			background-color: #f8f9fa38;
+			text-decoration: none;
+		}
+		nav :hover {
+			background-color: black;
+			color: white;
+		}
+		a {
+			text-decoration: none;
+			color: #fff;
+			padding: 0.5rem;
+		}
 
-	a:hover {
-		color: white;
-	}
+		a:hover {
+			color: white;
+			/* background-color: black; */
+		}
 
-	h1 {
-		text-align: center;
-		font-family: "Beth Ellen";
-		font-size: 3rem;
-		margin: 0;
-		/* border-bottom: 2px solid #000; */
-		margin-bottom: 1rem;
-		color: #f8f9fa;
-	}
+		h1 {
+			text-align: center;
+			font-family: "Beth Ellen";
+			font-size: 3rem;
+			margin: 0;
+			/* border-bottom: 2px solid #000; */
+			margin-bottom: 1rem;
+			color: #f8f9fa;
+		}
 
-	h2 {
-		font-family: "Inter Tight";
-		font-weight: 200;
-		font-weight: 800;
-		color: #f8f9fa;
-	}
+		h2 {
+			font-family: "Inter Tight";
+			font-weight: 200;
+			font-weight: 800;
+			color: #f8f9fa;
+		}
 
-	select {
-		background-color: #000009;
-		color: #f8f9fa;
-		/* border: none; */
-		font-family: "Inter Tight";
-		font-weight: 200;
-		font-size: 1rem;
-		appearance: none;
-		width: 100%;
-		text-align: right;
-	}
+		select {
+			/* background-color: #000009; */
+			color: #f8f9fa;
+			/* border: none; */
+			font-family: "Inter Tight";
+			font-weight: 200;
+			font-size: 1rem;
+			appearance: none;
+			width: 100%;
+			text-align: right;
+		}
 
-	select:hover {
-		background-color: #f8f9fa38;
-	}
-
-	option {
-		color: black;
-		background-color: #f8f9fa;
-	}
-
-	option:hover {
-		color: red;
-	}
-
-	.glen {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		/* height: 14vh;
+		.glen {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			/* height: 14vh;
 		width: 100%;
 		max-width: 600px; */
-		margin: auto;
-		margin-bottom: 1rem;
-		background-image: url("../../img/silhouette.gif");
-		background-size: cover;
-		background-position: center;
-		background-color: #f8f9fa38;
-		border-radius: 0.3rem;
-	}
-
-	.intro {
-		margin: auto;
-		/* width: 300px; */
-		margin-bottom: 1rem;
-		background-color: #f8f9fa38;
-		border-radius: 0.3rem;
-		opacity: 0.9;
-	}
-
-	#click-name:hover {
-		color: red;
-		cursor: pointer;
-	}
-
-	.right-align {
-		text-align: right;
-	}
-
-	@media (max-width: 600px) {
-		h1 {
-			font-size: 2rem;
+			margin: auto;
+			margin-bottom: 1rem;
+			background-image: url("../../img/silhouette.gif");
+			background-size: cover;
+			background-position: center;
+			background-color: #f8f9fa38;
+			border-radius: 0.3rem;
 		}
-	}
-</style>
+
+		.intro {
+			margin: auto;
+			/* width: 300px; */
+			margin-bottom: 1rem;
+			background-color: #f8f9fa38;
+			border-radius: 0.3rem;
+			opacity: 0.9;
+		}
+
+		.right-align {
+			text-align: right;
+		}
+
+		@media (max-width: 600px) {
+			h1 {
+				font-size: 2rem;
+			}
+		}
+	</style>
+</Layout>

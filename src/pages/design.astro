@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CreativeCard from "../components/CreativeCard.astro";
+import Header from "../components/Header.astro";
+
+const posters = [
+	"tibbs.png",
+	"yg.png",
+	"comic.png",
+	"pixel.png",
+	"vinylcover.png",
+	"conditioner.png",
+	"tape.jpg",
+	"releaseposter.png",
+	"bigbhang.png",
+	"botflyhouse.png",
+	"botflytour.png",
+	"car.png",
+	"tibbs2.png",
+	"ritualsnax.png",
+	"wax.png",
+	"toslow.png",
+	"LV2.png",
+	"pup.png",
+	"toslow2.png",
+	"rise.png",
+	"july15.png",
+];
+---
+
+<Layout title="ellison glen may">
+	<main>
+		<Header />
+		<CreativeCard
+			href="/showposters"
+			title="design"
+			body="a sample of some my design work. click to open image in a new tab."
+			content={posters}
+		/>
+
+		<style>
+			main {
+				margin: auto;
+				padding: 1.5rem;
+				height: 14vh;
+				/* width: 100%; */
+				max-width: 600px;
+				font-family: "Inter Tight";
+			}
+
+			ul,
+			li {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+				justify-content: space-between;
+				list-style: none;
+				padding: 0.2em;
+			}
+
+			header {
+				margin-bottom: 1rem;
+			}
+
+			nav {
+				display: flex;
+				justify-content: space-evenly;
+				margin-bottom: 0rem;
+				border-radius: 0rem 0rem 0.3rem 0.3rem;
+				color: #f8f9fa;
+				background-color: #f8f9fa38;
+				text-decoration: none;
+			}
+			nav :hover {
+				background-color: black;
+				color: white;
+			}
+			a {
+				text-decoration: none;
+				color: #fff;
+				padding: 0.5rem;
+			}
+
+			a:hover {
+				color: white;
+				/* background-color: black; */
+			}
+
+			h1 {
+				text-align: center;
+				font-family: "Beth Ellen";
+				font-size: 3rem;
+				margin: 0;
+				/* border-bottom: 2px solid #000; */
+				margin-bottom: 1rem;
+				color: #f8f9fa;
+			}
+
+			h2 {
+				font-family: "Inter Tight";
+				font-weight: 200;
+				font-weight: 800;
+				color: #f8f9fa;
+			}
+
+			select {
+				/* background-color: #000009; */
+				color: #f8f9fa;
+				/* border: none; */
+				font-family: "Inter Tight";
+				font-weight: 200;
+				font-size: 1rem;
+				appearance: none;
+				width: 100%;
+				text-align: right;
+			}
+
+			.glen {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				/* height: 14vh;
+		width: 100%;
+		max-width: 600px; */
+				margin: auto;
+				margin-bottom: 1rem;
+				background-image: url("../../img/silhouette.gif");
+				background-size: cover;
+				background-position: center;
+				background-color: #f8f9fa38;
+				border-radius: 0.3rem;
+			}
+
+			.intro {
+				margin: auto;
+				/* width: 300px; */
+				margin-bottom: 1rem;
+				background-color: #f8f9fa38;
+				border-radius: 0.3rem;
+				opacity: 0.9;
+			}
+
+			.right-align {
+				text-align: right;
+			}
+
+			@media (max-width: 600px) {
+				h1 {
+					font-size: 2rem;
+				}
+			}
+		</style>
+	</main>
+</Layout>
