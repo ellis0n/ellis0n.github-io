@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import AboutCard from "../components/AboutCard.astro";
 import ContactCard from "../components/ContactCard.astro";
 import Header from "../components/Header.astro";
+import CurrentCard from "../components/CurrentCard.astro";
 ---
 
 <Layout title="ellison glen may">
@@ -13,6 +14,11 @@ import Header from "../components/Header.astro";
 			href="/#"
 			title="about!"
 			body="hi, i'm glen! i'm a software developer in st. john's, newfoundland. "
+		/>
+		<CurrentCard
+			title="current!"
+			href="/current"
+			external=""
 		/>
 		<ContactCard
 			href="/contact"
@@ -25,7 +31,7 @@ import Header from "../components/Header.astro";
 					icon: "linkedin",
 				},
 				{ url: "https://www.instagram.com/internet_glen", icon: "instagram" },
-				{ url: "https://www.twitter.com/internet_glen", icon: "twitter" },
+				{ url: "https://www.twitter.com/ellisonglenmay", icon: "twitter" },
 				{ url: "mailto:ellisonglenmay.dev@gmail.com", icon: "email" },
 			]}
 		/>

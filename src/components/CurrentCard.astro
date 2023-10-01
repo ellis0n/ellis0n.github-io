@@ -1,0 +1,95 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	image: string;
+	external: string;
+}
+
+const { title, body, image, external } = Astro.props;
+---
+
+<div class="card">
+   <div class="header">
+       <h1>currently?</h1>
+    </div>
+	<div class="body">
+		<p>
+			i built this as a project to learn <a href="https://astro.build">astro</a> in a weekend between finishing college and starting my first job as a web developer at <a href="https://waterwerks.agency">waterwerks</a>, a marketing agency in st. john's, where i work with a team of talented developers and designers to build websites and web apps for clients.
+		</p>
+		
+		<p>
+			i plan on coming back and totally overhauling this portfolio soon. i'm currently working on a project for a <a href="https://barelythere.vercel.app"> friends record label</a> where i've learned a lot about astro & tailwind since building this site.
+		</p>
+		<p>
+			still, poke around here if you'd like! here are some other little toys i've built and hosted:
+            <ul>
+                <li><a href="https://jellyfish-app-mrhvv.ondigitalocean.app/home">twack</a> - an alternate view for kijiji advertisements, but mostly an excuse to learn and experiment with different programming concepts ranging from styling libraries to caching to authorization and authentication. its far from perfect!</li>
+                <li><a href="https://ellis0n.github.io/react-bk">react bk</a> - remember bluekaffee? what if it was... react? 
+            </ul>
+		</p>
+	</div>
+</div>
+	<style>
+		.card {
+			margin: auto;
+			/* width: 300px; */
+			margin-bottom: 1rem;
+			background-color: #f8f9fa38;
+			border-radius: 0.3rem;
+			opacity: 0.9;
+		}
+
+		.header {
+			height: auto;
+			text-align: center;
+			font-family: "Beth Ellen";
+			margin: 0;
+			/* border-bottom: 2px solid #000; */
+			margin-bottom: 1rem;
+			color: #f8f9fa;
+		}
+
+		.body {
+			padding: 0 1rem;
+			background-color: #f8f9fa46;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			margin: auto;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			border: 1px solid #000;
+			border-radius: 0.3rem;
+		}
+
+		p {
+			text-align: center;
+			font-weight: 200;
+			font-size: 1.4rem;
+
+			display: inline-block;
+			text-align: left;
+			padding: 1rem;
+			margin: auto auto;
+		}
+
+		a {
+            color: white;
+            background-color: black;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		a:hover {
+			background-color: white;
+            color: black;
+			text-decoration: none;
+		}
+	</style>
